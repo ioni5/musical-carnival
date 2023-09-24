@@ -7,7 +7,8 @@ app.get("/test", (req, res) => {
     res.status(200).send("This is a message");
 });
 
+const host = process.env.HOST;
 const port = process.env.PORT;
 app.listen(port, () => {
-    console.log(`Server running on port:${port}`);
+    console.log(`Server running on ${host}:${port}`);
 })
