@@ -6,5 +6,5 @@ app.get("/test", (req, res) => {
 });
 
 app.listen(9090, () => {
-    console.log("Server running on port:9090");
+    console.log(">>>Server running on port:9090");
 })
