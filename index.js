@@ -7,6 +7,7 @@ app.get("/test", (req, res) => {
     res.status(200).send("This is a message");
 });
 
-app.listen(9090, () => {
-    console.log("Server running on port:9090");
+const port = process.env.PORT;
+app.listen(port, () => {
+    console.log(`Server running on port:${port}`);
 })
