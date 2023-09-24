@@ -30,16 +30,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Heroku Action
-      # You may pin to the exact commit or the version.
-      # uses: CDNievas/heroku-action@c9cf9c85571e67583e44ec92c0d1113f66b0e838
-        uses: CDNievas/heroku-action@v1.0
-        with:
-          # Used for authentication. You can find it in your heroku homepage account settings
-          heroku_api_key: ${{secrets.HEROKU_API_TOKEN}}
-          # Email from Heroku Account
-          heroku_email: "jnyupanquip@gmail.com"
-          # The appname to use for deploying/updating
-          heroku_app_name: "meow-bb-dino"
     
-  
+    
+      - name: Heroku Build
+      # You may pin to the exact commit or the version.
+      # uses: behe/heroku-build@e062ad4e4170200099c6e739c88f74dfe8ea6500
+        uses: behe/heroku-build@v1.2
+        with:
+          # Name of Heroku application
+          app-name: "meow-bb-dino"
+          # API key with the deploy role
+          api-key: ${{secrets.HEROKU_API_TOKEN}}
