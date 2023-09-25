@@ -47,7 +47,7 @@ jobs:
 
 
   despliege:
-      needs: test
+      needs: integracion
       runs-on: ubuntu-latest
       steps:
         - name: Checkout
